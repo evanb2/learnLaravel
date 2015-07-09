@@ -9,6 +9,7 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
+| Note: Route parameters cannot contain the - character. Use an underscore (_) instead.
 */
 
 Route::get('/', function () {
