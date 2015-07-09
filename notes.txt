@@ -1,0 +1,15 @@
+Some nifty commands for Laravel:
+
+Check version: $ php artisan --version
+
+Using Homestead as server, add domain name to hosts file: $ sudo vi /etc/hosts
+    -> opens file in vim
+    -> go to end of file type 'o' to add new line below curser
+    -> copy/paste your new IP address with site domain ex. '192.168.10.10  homestead.app'
+    -> press 'esc' to exit edit mode
+    -> type ':wq' and press enter to save and quit
+
+After configuring Shared Folders in Homestead.yaml, you must use command: $ homestead up
+    -> you MUST run this command after setting filepath BEFORE you can access the server via 'http://homestead.app'
+
+To access Homestead server: $ homestead ssh
