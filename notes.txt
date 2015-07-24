@@ -25,3 +25,17 @@ $ php artisan help make:controller
     -> shows available commands for make:controller
 
 $ php artisan make:controller PagesController --plain
+-----------------------------------------------------------
+Migrations
+
+$ composer require doctrine/dbal
+    -> this is required in order to drop a column from a table using migrations
+
+$ sqlite3 storage/database.sqlite
+    -> sqlite> .tables
+    -> sqlite> .schema
+
+$ php artisan migrate
+$ php artisan migrate:rollback (undo previous migration)
+$ php artisan make:migration create_articles_table --create="articles"
+    -> make new migration    [ name of migration ] [--create="{name of table}"]

@@ -1,3 +1,11 @@
+## Learning Laravel 5
+-> run $ homestead up in terminal
+-> http://laravel5.app (using homestead)
+-> currently using sqlite DB
+
+
+
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
