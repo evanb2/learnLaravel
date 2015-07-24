@@ -13,3 +13,15 @@ After configuring Shared Folders in Homestead.yaml, you must use command: $ home
     -> you MUST run this command after setting filepath BEFORE you can access the server via 'http://homestead.app'
 
 To access Homestead server: $ homestead ssh
+
+Rename file .env.example to .env
+
+$ php artisan tinker
+    -> command line for testing functions and messing around
+----------------------------------------------------------
+Controllers
+
+$ php artisan help make:controller
+    -> shows available commands for make:controller
+
+$ php artisan make:controller PagesController --plain
