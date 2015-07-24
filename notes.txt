@@ -1,41 +1,66 @@
 Some nifty commands for Laravel:
 
-Check version: $ php artisan --version
+    Check version: $ php artisan --version
 
-Using Homestead as server, add domain name to hosts file: $ sudo vi /etc/hosts
-    -> opens file in vim
-    -> go to end of file type 'o' to add new line below curser
-    -> copy/paste your new IP address with site domain ex. '192.168.10.10  homestead.app'
-    -> press 'esc' to exit edit mode
-    -> type ':wq' and press enter to save and quit
+    Using Homestead as server, add domain name to hosts file: $ sudo vi /etc/hosts
+        -> opens file in vim
+        -> go to end of file type 'o' to add new line below curser
+        -> copy/paste your new IP address with site domain ex. '192.168.10.10  homestead.app'
+        -> press 'esc' to exit edit mode
+        -> type ':wq' and press enter to save and quit
 
-After configuring Shared Folders in Homestead.yaml, you must use command: $ homestead up
-    -> you MUST run this command after setting filepath BEFORE you can access the server via 'http://homestead.app'
+    After configuring Shared Folders in Homestead.yaml, you must use command: $ homestead up
+        -> you MUST run this command after setting filepath BEFORE you can access the server via 'http://homestead.app'
 
-To access Homestead server: $ homestead ssh
+    To access Homestead server: $ homestead ssh
 
-Rename file .env.example to .env
+    Rename file .env.example to .env
 
-$ php artisan tinker
-    -> command line for testing functions and messing around
+    $ php artisan tinker
+        -> command line for testing functions and messing around
 ----------------------------------------------------------
 Controllers
 
-$ php artisan help make:controller
-    -> shows available commands for make:controller
+    $ php artisan help make:controller
+        -> shows available commands for make:controller
 
-$ php artisan make:controller PagesController --plain
+    $ php artisan make:controller PagesController --plain
 -----------------------------------------------------------
 Migrations
 
-$ composer require doctrine/dbal
-    -> this is required in order to drop a column from a table using migrations
+    $ composer require doctrine/dbal
+        -> this is required in order to drop a column from a table using migrations
 
-$ sqlite3 storage/database.sqlite
-    -> sqlite> .tables
-    -> sqlite> .schema
+    $ sqlite3 storage/database.sqlite
+        -> sqlite> .tables
+        -> sqlite> .schema
 
-$ php artisan migrate
-$ php artisan migrate:rollback (undo previous migration)
-$ php artisan make:migration create_articles_table --create="articles"
-    -> make new migration    [ name of migration ] [--create="{name of table}"]
+    $ php artisan migrate
+    $ php artisan migrate:rollback (undo previous migration)
+    $ php artisan make:migration create_articles_table --create="articles"
+        -> make new migration    [ name of migration ] [--create="{name of table}"]
+-----------------------------------------------------------
+Eloquent
+
+    Method 1:
+        $article = new App\Article;
+        $article->title = "My First Article";
+        $article->body = "Lorem ipsum";
+        $article->published_at = Carbon\Carbon::now();
+    Method 2:
+        $article = App\Article::create(['title' => 'New Article', 'body' => 'New Body', 'published_at' => Carbon\Carbon::now()]);
+
+    $article->toArray();
+        -> turn article object into array for easy viewing
+
+    $article->save();
+        -> save to DB
+
+    $article->update(['body' => 'Updated Body']);
+        -> update a field and save()
+
+    App\Article::all()->toArray();
+        -> query DB, return all, cast to array
+
+    $found_article = App\Article::find(1);
+        -> query DB and find article with $id = 1
