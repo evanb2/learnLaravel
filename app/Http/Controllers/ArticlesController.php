@@ -11,6 +11,11 @@ use Carbon\Carbon;
 
 class ArticlesController extends Controller
 {
+    /**
+     * Show all articles.
+     *
+     * @return Response
+     */
     public function index()
     {
         //Order the articles by latest first
@@ -19,6 +24,12 @@ class ArticlesController extends Controller
         return view('articles.index', compact('articles'));
     }
 
+    /**
+     * Show a single article.
+     *
+     * @param integer $id
+     * @return Response
+     */
     public function show($id)
     {
         $article = Article::findOrFail($id);
@@ -26,11 +37,21 @@ class ArticlesController extends Controller
         return view('articles.show', compact('article'));
     }
 
+    /**
+     * Show the page to create a new article.
+     *
+     * @return Response
+     */
     public function create()
     {
         return view('articles.create');
     }
 
+    /**
+     * Save a new article.
+     *
+     * @return Response
+     */
     public function store()
     {
         Article::create(Request::all());
