@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    //
-        //
     /**
      * Fillable fields for an Article.
      * Sets which fields have permission to use the App\Article::create() method.
