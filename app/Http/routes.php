@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('contact', function () {
     return view('pages.contact');
 });
+
+Route::get('articles', 'ArticlesController@index');
+Route::get('articles/{id}', 'ArticlesController@show');
