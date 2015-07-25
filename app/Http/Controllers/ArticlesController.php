@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Http\Requests;
+use App\Http\Requests\CreateArticleRequest;
 use App\Http\Controllers\Controller;
-use Request;
 use Carbon\Carbon;
 
 class ArticlesController extends Controller
@@ -50,11 +50,12 @@ class ArticlesController extends Controller
     /**
      * Save a new article.
      *
+     * @param CreateArticleRequest $request
      * @return Response
      */
-    public function store()
+    public function store(CreateArticleRequest $request)
     {
-        Article::create(Request::all());
+        Article::create($request->all());
 
         return redirect('articles');
     }
