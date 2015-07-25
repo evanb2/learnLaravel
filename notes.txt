@@ -64,3 +64,11 @@ Eloquent
 
     $found_article = App\Article::find(1);
         -> query DB and find article with $id = 1
+-----------------------------------------------------------
+Resources
+
+    $ php artisan route:list
+        -> list all routes
+
+    Route::resource('articles', 'ArticlesController');
+        -> creates all CRUD routes in 1 line
