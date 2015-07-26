@@ -11,5 +11,10 @@
     </div>
 
     @yield('footer')
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <a href="/articles"><button class="btn btn-primary form-control">Home</button></a>
+    </div>
+    <div class="col-md-4"></div>
 </body>
 </html>

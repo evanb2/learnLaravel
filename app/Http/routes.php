@@ -13,7 +13,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('articles.create');
 });
 
 Route::get('contact', function () {
@@ -26,3 +26,8 @@ Route::get('contact', function () {
 // Route::post('articles', 'ArticlesController@store');
 
 Route::resource('articles', 'ArticlesController');
+
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
