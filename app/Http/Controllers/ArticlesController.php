@@ -33,7 +33,7 @@ class ArticlesController extends Controller
     /**
      * Show a single article.
      *
-     * @param integer $id
+     * @param Article $article
      * @return Response
      */
     public function show(Article $article)
@@ -69,7 +69,7 @@ class ArticlesController extends Controller
     /**
      * Edit an article.
      *
-     * @param integer $id
+     * @param Article $article
      * @return Response
      */
     public function edit(Article $article)
@@ -80,8 +80,8 @@ class ArticlesController extends Controller
     /**
      * Update an article.
      *
+     * @param Article $article
      * @param ArticleRequest $request
-     * @param integer $id
      * @return Response
      */
     public function update(Article $article, ArticleRequest $request)
