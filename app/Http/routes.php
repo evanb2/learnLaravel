@@ -12,13 +12,7 @@
 | Note: Route parameters cannot contain the - character. Use an underscore (_) instead.
 */
 
-Route::get('/', function () {
-    return view('articles.index');
-});
-
-Route::get('home', function () {
-    return view('pages.home');
-});
+Route::get('/', 'ArticlesController@index');
 
 Route::get('contact', function () {
     return view('pages.contact');

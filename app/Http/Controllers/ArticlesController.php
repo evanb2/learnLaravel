@@ -12,6 +12,11 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => 'create']);
+    }
+
     /**
      * Show all articles.
      *
