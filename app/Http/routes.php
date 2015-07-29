@@ -13,7 +13,11 @@
 */
 
 Route::get('/', function () {
-    return view('articles.create');
+    return view('articles.index');
+});
+
+Route::get('home', function () {
+    return view('pages.home');
 });
 
 Route::get('contact', function () {
