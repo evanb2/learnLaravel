@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Master Page</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
     <div class="container">
