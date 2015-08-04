@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAEA;EACI,mBAAkB,EADhB;;AAIL;EACG,iBAAgB;EAChB,oBAAmB,EAFd","file":"app.css","sourcesContent":["// @import \"node_modules/bootstrap-sass/assets/stylesheets/bootstrap\";\n\nbody {\n    padding-top: 40px;\n}\n\na:hover {\n    cursor: pointer;\n    font-style: italic;\n}\n"],"sourceRoot":"/source/"}
